@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Memórias Escolares | Lucas Guilherme Gomes de Mattos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="top-bar">
+    <div class="top-bar-inner">
+      <button class="brand-logo" data-nav="inicio" aria-label="Ir para o início">
+        <span class="brand-dot" aria-hidden="true"></span>
+        <span class="brand-name">MEMÓRIAS ESCOLARES</span>
+      </button>
+
+      <nav class="main-nav" aria-label="Navegação principal">
+        <ul class="nav-list">
+          <li><button class="nav-link is-active" data-nav="inicio">INÍCIO</button></li>
+          <li><button class="nav-link" data-nav="escolas">ESCOLAS</button></li>
+          <li><button class="nav-link" data-nav="historia">MINHA HISTÓRIA</button></li>
+          <li><button class="nav-link" data-nav="redacoes">17 REDAÇÕES</button></li>
+        </ul>
+      </nav>
+
+      <button
+        class="mobile-toggle"
+        id="mobileToggle"
+        aria-expanded="false"
+        aria-controls="mobileDrawer"
+        aria-label="Abrir menu"
+      >
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+
+    <div class="mobile-drawer" id="mobileDrawer" hidden>
+      <ul class="mobile-nav-list">
+        <li><button class="mobile-nav-link is-active" data-nav="inicio">01. INÍCIO</button></li>
+        <li><button class="mobile-nav-link" data-nav="escolas">02. ESCOLAS</button></li>
+        <li><button class="mobile-nav-link" data-nav="historia">03. MINHA HISTÓRIA</button></li>
+        <li><button class="mobile-nav-link" data-nav="redacoes">04. 17 REDAÇÕES</button></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="app-viewport">
+    <section id="layer-inicio" class="screen-layer is-active">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="meta-strip">
+            <span class="academic-badge">MEMÓRIAS ESCOLARES</span>
+            <span class="mono-meta">NASCIMENTO: 17/03/2009</span>
+          </div>
+
+          <h1 class="hero-title">Lucas Guilherme Gomes de Mattos</h1>
+          <p class="hero-subtitle">Minha trajetória escolar, o sonho no futebol e as 17 redações feitas durante os estudos.</p>
+
+          <p class="hero-description">
+            Este espaço reúne minhas lembranças dos anos de escola, os colégios onde estudei, a mudança de cidade para morar sozinho por causa do futebol e as 17 redações escritas ao longo da minha formação.
+          </p>
+
+          <div class="hero-actions">
+            <button type="button" class="btn btn-primary" data-nav="escolas">VER MINHAS ESCOLAS</button>
+            <button type="button" class="btn btn-secondary" data-nav="redacoes">LER AS 17 REDAÇÕES</button>
+          </div>
+
+          <div class="hero-specs">
+            <div class="spec-item">
+              <span class="spec-label">ENSINO FUNDAMENTAL</span>
+              <span class="spec-value">Colégio Amplação (Pré ao 9º ano)</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">1º ANO ENSINO MÉDIO</span>
+              <span class="spec-value">Colégio Dinâmico (Ponta Grossa)</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">2º E 3º ANO ENSINO MÉDIO</span>
+              <span class="spec-value">Colégio Morelli</span>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-media-column">
+          <div class="photo-frame">
+            <div class="photo-frame-header">
+              <span class="mono-tag">REGISTRO PESSOAL</span>
+              <span class="mono-tag">4:5</span>
+            </div>
+            <div class="photo-placeholder" id="photoBox">
+              <img
+                src="foto.jpg"
+                alt="Foto de Lucas Guilherme Gomes de Mattos"
+                class="user-photo"
+                onload="this.parentElement.classList.add('has-photo')"
+                onerror="this.style.display='none'"
+              />
+              <div class="crosshair-tl" aria-hidden="true"></div>
+              <div class="crosshair-br" aria-hidden="true"></div>
+              <svg class="placeholder-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" stroke-width="1.4"/>
+                <circle cx="8.5" cy="9.5" r="1.5" stroke="currentColor" stroke-width="1.4"/>
+                <path d="M21 16L16 11L6 20" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span class="placeholder-label">SALVE SUA FOTO COMO foto.jpg</span>
+              <span class="placeholder-sub">Coloque na mesma pasta do site para aparecer</span>
+            </div>
+            <div class="photo-frame-footer">
+              <span>LUCAS G. G. DE MATTOS</span>
+              <span>17/03/2009</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="layer-escolas" class="screen-layer" hidden>
+      <div class="container">
+        <header class="section-header">
+          <div>
+            <span class="mono-tag">PERCURSO EDUCACIONAL</span>
+            <h2 class="section-title">As Escolas da Minha Vida</h2>
+          </div>
+          <p class="section-lead">
+            Cada escola fez parte de uma fase importante dos meus estudos e do meu crescimento.
+          </p>
+        </header>
+
+        <div class="schools-grid">
+          <article class="school-card">
+            <div class="school-card-top">
+              <span class="school-step">ETAPA 01</span>
+              <span class="school-period">PRÉ AO 9º ANO</span>
+            </div>
+            <h3 class="school-name">Colégio Amplação</h3>
+            <p class="school-text">
+              Estudei no Colégio Amplação desde o pré até o 9º ano do Ensino Fundamental. Foi onde construí minha base escolar, fiz amizades importantes e vivi grande parte da minha infância e adolescência.
+            </p>
+          </article>
+
+          <article class="school-card">
+            <div class="school-card-top">
+              <span class="school-step">ETAPA 02</span>
+              <span class="school-period">1º ANO DO ENSINO MÉDIO</span>
+            </div>
+            <h3 class="school-name">Colégio Dinâmico, Ponta Grossa</h3>
+            <p class="school-text">
+              No 1º ano do Ensino Médio, mudei para Ponta Grossa e estudei no Colégio Dinâmico. Foi um ano de adaptação a uma nova cidade e a uma nova rotina escolar, conhecendo novas pessoas e dando continuidade aos estudos.
+            </p>
+          </article>
+
+          <article class="school-card">
+            <div class="school-card-top">
+              <span class="school-step">ETAPA 03</span>
+              <span class="school-period">2º E 3º ANO DO ENSINO MÉDIO</span>
+            </div>
+            <h3 class="school-name">Colégio Morelli</h3>
+            <p class="school-text">
+              Concluí o 2º e o 3º ano do Ensino Médio no Colégio Morelli. Nessa fase final da escola, amadureci bastante nos estudos e escrevi a maior parte das redações reunidas neste site.
+            </p>
+          </article>
+        </div>
+
+        <div class="layer-nav-footer">
+          <button type="button" class="btn btn-secondary" data-nav="inicio">VOLTAR AO INÍCIO</button>
+          <button type="button" class="btn btn-primary" data-nav="historia">LER MINHA HISTÓRIA</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="layer-historia" class="screen-layer" hidden>
+      <div class="container">
+        <header class="section-header">
+          <div>
+            <span class="mono-tag">TRAJETÓRIA DE VIDA</span>
+            <h2 class="section-title">O Futebol e a Mudança de Cidade</h2>
+          </div>
+          <p class="section-lead">
+            Nascido em 17 de março de 2009, sempre busquei conciliar o futebol com os estudos.
+          </p>
+        </header>
+
+        <div class="story-layout">
+          <article class="story-card">
+            <span class="mono-tag">AOS 4 ANOS DE IDADE</span>
+            <h3>O Começo no Futebol</h3>
+            <p>
+              Comecei a jogar futebol muito cedo, aos 4 anos de idade. Desde pequeno, sempre tive o sonho de me tornar jogador e levei o esporte como parte central da minha rotina.
+            </p>
+          </article>
+
+          <article class="story-card">
+            <span class="mono-tag">MUDANÇA DE CIDADE</span>
+            <h3>Morando Sozinho Longe da Família</h3>
+            <p>
+              Para correr atrás desse sonho no futebol, deixei minha família para trás e fui morar sozinho em outra cidade. Viver longe de casa cedo me ensinou a ter responsabilidade, cuidar das minhas coisas e manter o foco no dia a dia.
+            </p>
+          </article>
+
+          <article class="story-card">
+            <span class="mono-tag">ESTUDOS E ROTINA</span>
+            <h3>Conciliando Escola e Treinos</h3>
+            <p>
+              Mesmo mudando de cidade e de escola, passando pelo Colégio Amplação, pelo Colégio Dinâmico e pelo Colégio Morelli, mantive o compromisso com os estudos. As 17 redações deste acervo fazem parte dessa caminhada escolar.
+            </p>
+          </article>
+        </div>
+
+        <div class="layer-nav-footer">
+          <button type="button" class="btn btn-secondary" data-nav="escolas">VOLTAR PARA ESCOLAS</button>
+          <button type="button" class="btn btn-primary" data-nav="redacoes">VER AS 17 REDAÇÕES</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="layer-redacoes" class="screen-layer" hidden>
+      <div class="container">
+        <header class="section-header">
+          <div>
+            <span class="mono-tag">PRODUÇÕES TEXTUAIS</span>
+            <h2 class="section-title">Minhas 17 Redações</h2>
+          </div>
+          <p class="section-lead">
+            Selecione uma redação na lista ao lado para ler o texto completo na ordem em que foi produzido.
+          </p>
+        </header>
+
+        <div class="explorer-split">
+          <div class="explorer-list-pane" role="listbox" aria-label="Lista das 17 redações" id="essaysList"></div>
+
+          <article class="explorer-detail-pane" id="essayDetailPane" aria-live="polite">
+            <div class="detail-topbar">
+              <span class="mono-tag" id="essayNumber">REDAÇÃO 01 DE 17</span>
+              <span class="detail-category-badge" id="essayTheme">MEIO AMBIENTE</span>
+            </div>
+
+            <h3 class="detail-title" id="essayTitle">Título da Redação</h3>
+
+            <div class="detail-body" id="essayBody"></div>
+
+            <div class="detail-footer-actions">
+              <button type="button" class="btn btn-secondary btn-sm" id="btnPrevEssay">REDAÇÃO ANTERIOR</button>
+              <button type="button" class="btn btn-primary btn-sm" id="btnNextEssay">PRÓXIMA REDAÇÃO</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>MEMÓRIAS ESCOLARES, LUCAS GUILHERME GOMES DE MATTOS (17/03/2009)</span>
+      <span>COLÉGIO AMPLACÃO, COLÉGIO DINÂMICO E COLÉGIO MORELLI</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
